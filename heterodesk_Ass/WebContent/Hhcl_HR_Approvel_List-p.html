@@ -1,0 +1,520 @@
+<!doctype html>
+<html class="fixed">
+	<head>
+
+		<!-- Basic -->
+		<meta charset="UTF-8">
+
+		
+		<meta name="keywords" content="HETERO" />
+		<meta name="description" content="Hetero">
+		<meta name="author" content="Hetero">
+
+         <title>Hetero Healthcare LTD</title>
+          <link rel="icon" href="LOH.png" />
+          
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+
+		<!-- Web Fonts  -->
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.css" />
+		<link rel="stylesheet" href="assets/vendor/magnific-popup/magnific-popup.css" />
+	
+<link rel="stylesheet" href="assets/stylesheets/GScroll.css" />
+		<link rel="shortcut icon" href="/images.png" type="image/x-icon" />
+
+		<!-- Specific Page Vendor CSS -->
+		<link rel="stylesheet" href="assets/vendor/jquery-ui/css/ui-lightness/jquery-ui-1.10.4.custom.css" />
+		
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="assets/stylesheets/theme.css" />
+
+		<!-- Skin CSS -->
+		<link rel="stylesheet" href="assets/stylesheets/skins/default.css" />
+	
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="assets/stylesheets/theme-custom.css">
+			<!-- <script src="assets/vendor/jquery/jquery.js"></script> -->
+			 <link rel="stylesheet" href="colorbox.css" />
+	<script src="jquery.colorbox.js"></script> 
+<!-- 	 <script src="assets/vendor/nanoscroller/nanoscroller.js"></script>  -->
+<!-- 	<link rel="stylesheet" href="assets/vendor/nanoscroller/nanoscroller.css"> -->
+		
+	<!--  <script src="assets/javascripts/jquery-1.8.3.js"></script> 
+	<script src="assets/javascripts/GScroll.js"></script> 
+	
+	 
+      
+        
+		<!-- Head Libs -->
+		<script src="assets/vendor/modernizr/modernizr.js"></script>
+		<link rel="stylesheet" type="text/css" href="css3clock.css" />
+
+<!-- <link href="scroll/perfect-scrollbar.css" rel="stylesheet">
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script src="scroll/jquery.mousewheel.js"></script>
+      <script src="scroll/perfect-scrollbar.js"></script> -->
+      
+  
+  
+  <link rel="stylesheet" href="css/icon-font.min.css" type='text/css' />
+<link rel="stylesheet" href="css/jqueryui.css" type='text/css' />
+<link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+   <script src="jquery-ui-1.12.1.custom/jquery-1.12.4.js"></script>
+   <script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+  <style>
+  .modal {
+}
+.vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+}
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+}
+.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+    width:inherit;
+    height:inherit;
+    /* To center horizontally */
+    margin: 0 auto;
+}
+  
+  </style>
+	</head>
+	
+	<body  onpageshow="if (event.persisted) noBack();"  ng-app="myApp" ng-controller="formCtrl" ">
+		<section class="body">
+
+			<!-- start: header onload="disableBackButton();-->
+			<header class="header">
+				<div class="logo-container">
+					<a href="#" class="logo">
+						<img src="assets/images/logo.png" alt="" />
+					</a>
+					<div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
+						<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+					</div>
+				</div>
+			
+				<!-- start: search & user box -->
+				<div class="header-right">
+			
+					<div id="userbox" class="userbox">
+						<a href="#" data-toggle="dropdown">
+							<div class="clear"></div>
+							<div class="profile-info" data-lock-name="" data-lock-email="">
+								<span class="name">{{empname}}</span>
+								
+							</div>
+			
+							<i class="fa custom-caret"></i>
+						</a>
+			
+						<div class="dropdown-menu">
+							<ul class="list-unstyled">
+								<li class="divider"></li>
+								<!-- <li>
+									<a role="menuitem" tabindex="-1" href="data-toggle="modal" data-target="#myModal"><i class="fa fa-cogs"></i>Change Password</a>
+									<a role="menuitem" tabindex="-1" data-toggle="modal" href="#changepassword" ><i class="fa fa-cogs"></i>Change Password</a>
+								</li> -->
+								<li>
+									<a role="menuitem" tabindex="-1" href="logout"><i class="fa fa-power-off"></i> Logout</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- end: search & user box -->
+			</header>
+			<!-- end: header -->
+
+			<div class="inner-wrapper">
+				<!-- start: sidebar -->
+				<aside id="sidebar-left" class="sidebar-left">
+					<div class="nano">
+						<div class="nano-content">
+							<nav id="menu" class="nav-main" role="navigation">
+								<ul class="nav nav-main">
+									
+									<li class="active">
+									  <a href="User_Auth?Routing=DashBoard">
+										<i class="fa fa-tachometer"></i>
+										<span class="font-bold">Dashboard</span>
+									  </a>
+									</li>
+									<li>
+									  <a href="NewJoinees?Routing=MyProfile"  >
+										<i class="fa fa-user"></i>
+										<span class="font-bold">Profile</span>
+									  </a>
+									</li>
+									<li>
+									  <a href="PayslipDownload">
+										<i class="fa fa-download"></i>
+										<span class="font-bold">Downloads</span>
+									  </a>
+									</li>
+									
+									<li>
+									  <a href="hhcl_careers.jsp">
+										<i class="fa fa-briefcase"></i>
+										<span class="font-bold">Careers</span>
+									  </a>
+									</li>
+									
+									
+							     <!-- Manager Approvals Start -->
+							
+									<li style="display:<%=MGRFLAG_S%>;">
+									  <a  href="ManagerApprovals?Routing=ManagerAppr" target="_parent">
+										<i class="fa fa-check" ></i>
+										<span class="font-bold">Manager Approvals</span>
+									  </a>
+									</li>
+									
+									<!-- Manager Approvals End -->
+									<li style="display:<%=TDSFLAG%>;">
+									  <a href="http://mydesk.heterohcl.com/IT/" target="_blank">
+										<i class="fa fa-money "></i>
+										<span class="font-bold">TDS Declaration</span>
+									  </a>
+									</li>
+									
+									<li>
+									  <a href="NewJoinees?Routing=DEPINFO">
+										<i class="fa fa-users"></i>
+										<span class="font-bold">Department Information</span>
+									  </a>
+									</li>
+									<li>
+									  <a href="resignation.html" target="_blank">
+										<i class="fa fa-sign-out"></i>
+										<span class="font-bold">Resignation</span>
+									  </a>
+									</li>
+									<li>
+									  <a href="http://www.heterohealthcare.com/" target="_blank">
+										<i class="fa fa-info-circle"></i>
+										<span class="font-bold">About Our Organization</span>
+									  </a>
+									</li>
+									
+									
+									
+								</ul>
+								
+							</nav>
+							
+					</div>
+				
+							
+<!-- <script type="text/javascript">
+				$(function() {
+  $( "#datepicker" ).datepicker({ firstDay: 1});
+});
+				</script>	 -->		
+						</div>
+				</aside>
+				<!-- end: sidebar -->
+
+				<section role="main" class="content-body">
+					<header class="page-header">
+					<div class="clear col-md-5" style="color:red;"> <marquee> <%=session.getAttribute("HHCL_EVENT_INFO")%>  </marquee></div>
+					
+				 <!--  <div class="col-md-2 tool-tip-header">
+				   <div class="weather">
+						<a href="#" class="tooltip">
+							<img src="images/ww.png" data-trigger-modal="modal" class="icon-img" />
+							<span>
+								<img class="callout" src="images/callout_black.gif" />
+								<img src="images/css3-tooltip-image.png" style="float:right;" />
+								<strong>CSS only Tooltip</strong><br />
+								Pure CSS popup tooltips with clean semantic XHTML.
+							</span>
+						</a>
+				   </div>
+				   <div class="quote">
+						<a href="#" class="tooltip">
+							<img src="images/hand.png" class="icon-img" />
+							<span>
+								<img class="callout" src="images/callout_black.gif" />
+								<img src="images/css3-tooltip-image.png" style="float:right;" />
+								<strong>CSS only Tooltip</strong><br />
+								Pure CSS popup tooltips with clean semantic XHTML.
+							</span>
+						</a>
+				   </div>
+				 
+				 </div> -->
+				 
+					<div class="col-md-3 col-sm-3">
+					<span><b>Date:</b> <span>
+						 
+					</span> </span>
+					</div>
+					 <div class="col-md-2 user">
+					  
+					  <ul class="user-img">
+					  <li> <img src="images/user1.png" alt="user">:</li>
+					  <li><span> <p>12389</p> </span></li>
+					  
+					  </ul>
+					
+					  
+					</div>
+					
+					
+					
+					
+					
+					
+				</header>
+					<!-- start: page -->
+					<div class="row">
+						<div class="col-md-12">
+							<!-- start: page -->
+					<div id="description" class="wrapper" style="margin-top:10%;">
+					<div class="container">
+						<div class="row " >
+							<div class="col-md-10 middle-reg1">
+								<div class="panel panel-danger" >
+									<div class="panel-heading1">
+										<span><b>HR Approvel List</b> </span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								        <!-- <span id="Responce_Message" style="color:white;" >  </span> -->
+									</div>
+									<div class="panel-body">
+										
+											<div class="col-sm-9 col-md-9 center_div2">
+											
+												<div class="form-group" style="margin-left: 9%;">
+													<label class="col-md-2 control-label">Types </label>
+													<div class="col-md-5">
+																 <select class="form-control " id="type" name="type" onchange='myFunction()'>
+															<option value="Select">--Select One--</option>
+															<option value="EmployeeName">EMPLOYEE NAME</option>
+															<option value="DateOfBirth">DATE OF BIRTH</option>
+															<option value="PFNO">PF NUMBER</option>
+															<!-- <option value="ACCOUNTNO">ACCOUNT NO</option> -->
+															<option value="PFUAN">PF UAN NO</option>
+															<option value="BANKDETAILS">BANK DETAILS</option>
+															<option value="PerAddress">PERMANENT ADDRESS</option>
+															
+															
+															 
+													</select> 										
+
+													</div>
+												</div>
+											
+												
+												
+												
+											
+												
+												</div>
+											
+											<div class="col-md-12">
+											<div class="table1">
+												 
+
+
+												  <div class="table-responsive">
+													<table class="table table-bordered" id="table">
+													  <thead class="td-table">
+														<tr class="tr-table" id="tr1" style=display:none;>
+														 
+														  <th>EMPLOYEE ID</th>
+						                                  <th>FULL NAME</th>
+						                                   <th>LAST NAME</th>
+						                                  <th>ACTION</th>
+														</tr>
+														
+														
+														<tr class="tr-table" id="tr2" style=display:none;>
+														 
+														  <th>EMPLOYEE ID</th>
+						                                  <th>DATEOFBIRTH</th>
+						                                   <th>ACTION</th>
+														</tr>
+														
+														
+														
+														<tr class="tr-table" id="tr3" style=display:none;>
+									                           <th>EMPLOYEEID</th>
+									                          <th>PFNO</th>
+									                          <th>ACTION</th>
+									                   </tr>
+														
+														
+													<!-- 	<tr class="tr-table" id="tr4" style=display:none;>
+									<th>EMPLOYEEID</th>
+									<th>ACCOUNTNO</th>
+									<th>ACTION</th>
+									</tr> -->
+												  <tr class="tr-table" id="tr5" style=display:none;>
+									<th>EMPLOYEEID</th>
+									<th>ACCOUNTNO</th>
+									<th>ACTION</th>
+									</tr>	  
+									
+									<tr class="tr-table" id="tr6" style=display:none;>
+									<th>EMPLOYEEID</th>
+									<th>BANKNAME</th>
+									<th>ACCOUNTNO</th>
+									<th>ACTION</th>
+									</tr>
+									
+									<tr class="tr-table" id="tr7" style=display:none;>
+									<th>EMPLOYEEID</th>
+									<th>PER ADDRESS1</th>
+									<th>PER ADDRESS2</th>
+									<th>EMAILID</th>
+									<th>STATE</th>
+									<th>CITY</th>
+									<th>ACTION</th>
+									</tr>
+									
+									
+										
+													  </thead>
+													  <tbody id="tableBody">
+														 
+													  </tbody>
+													</table>
+												  </div>
+												
+												
+												</div>
+											</div>
+										
+											
+												
+												<div class="clearfix"></div>
+											 
+											
+										</div>
+									</div>
+									
+									
+								</div>
+							</div>
+						</div>	
+						
+					</div>
+					</div>
+					<!-- end: page -->
+							   
+							   
+							   
+							   
+							   
+							   
+							   
+						</div>
+					</div>
+					
+								
+					
+					<!-- end: page -->
+					<!--Change Password Modal-->
+					<div class="modal fade" id="changepassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-pwd" aria-hidden="true">
+					<div class="vertical-alignment-helper">
+					  <div class="modal-dialog vertical-align-center" role="document">
+						<div class="modal-content ">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							  <span aria-hidden="true">&times;</span>
+							</button>
+							<h4 class="modal-title" id="myModalLabel-pwd">Change Password</h4>
+						  </div>
+							<div class="modal-body">
+								<form action="" method="post" enctype="multipart/form-data">
+									<div class="form-group ">
+											<label class="col-sm-5 control-label">Current Password</label>
+											<div class="col-sm-7">
+												<input type="password" class="form-control" name="currentpassword" id="currentpassword" placeholder="Current Password">
+											</div>
+										</div>
+										<div class="form-group ">
+											<label class="col-sm-5 control-label">New Password</label>
+											<div class="col-sm-7">
+												<input type="password" class="form-control"  name="newpassword" id="newpassword" placeholder="New Password" onblur="validatePassword('N');">
+												
+											</div>
+										</div>
+										<div class="form-group ">
+											<label class="col-sm-5 control-label">Confirm Password</label>
+											<div class="col-sm-7">
+												<input type="password" class="form-control" name="confirmpassword" id="confirmpassword" onblur="validatePassword('N');" placeholder="Confirm Password">
+											</div>
+										</div>
+										<br>
+										<span style="color:red;">Instructions:</span>Password should be minimum 6 & maximum 15 Characters with <br>minimum one letter [a-z(OR)A-Z] ,minimum one special Character [!,@,#,$,&] and Number[0-9].
+										<span style="color:#08c;">Example:Hetero@123</span>	
+										
+																		
+								</form>
+							</div>
+							<div class="modal-footer">
+							<span id="Responce_Message" style="color:red;" class="align-left" >  </span>
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>&nbsp;
+							<button type="button" id="Responce_Message_btn" class="btn btn-primary" onclick="validatePassword('Y')" >Save</button>
+						  </div>
+						</div>
+					  </div>
+					  </div>
+					</div>
+					
+				</section>
+			</div>
+		</section>
+		<!-- Vendor -->
+		<!-- <script src="assets/vendor/jquery/jquery.js"></script> -->
+		<script src="assets/vendor/bootstrap/js/bootstrap.js"></script>
+		<!-- Specific Page Vendor -->
+		<!-- <script src="assets/vendor/jquery-ui/js/jquery-ui-1.10.4.custom.js"></script> -->
+		<!-- Theme Base, Components and Settings -->
+		<script src="assets/javascripts/theme.js"></script>
+		<!-- Theme Custom -->
+		<script src="assets/javascripts/theme.custom.js"></script>
+		<!-- Theme Initialization Files -->
+		<script src="assets/javascripts/theme.init.js"></script>
+		<!-- Examples -->
+		<script src="assets/javascripts/dashboard/examples.dashboard.js"></script>
+				<!-- start popup ad here -->
+			<script src="assets/javascripts/jquery.colorbox.js"></script>
+	<!--	<script>
+			$(document).ready(function(){
+                 setTimeout(function() {
+					$(".group1").colorbox({rel:'group1' ,open:true});  
+
+                ///$.fn.colorbox({href:"img/image002.png", open:true});
+				}, 1500);
+				//Examples of how to assign the Colorbox event to elements
+				//$(".group1").colorbox({rel:'group1'});
+				//$.fn.colorbox({href:"../content/01.jpg", open:true});
+			});
+		</script>
+		<div style="display:none;">
+		<h1>Colorbox Demonstration</h1>
+		<h2>Elastic Transition</h2>
+		<p><a class="group1" href="assets/images/01.jpg" title="Drawing & Painting Competition">Grouped Photo 1</a></p>
+		<p><a class="group1" href="assets/images/01.jpg" title="Drawing & Painting Competition">Grouped Photo 2</a></p>
+		<p><a class="group1" href="assets/images/01.jpg" title="Drawing & Painting Competition">Grouped Photo 3</a></p>
+		<p><a class="group1" href="assets/images/01.jpg" title="Drawing & Painting Competition">Grouped Photo 4</a></p>
+		</div>-->
+	<!-- end popup ad here -->
+<!-- Change Password -->
+   <script src="hr_approve.js"></script>
+ 	</body>
+</html>

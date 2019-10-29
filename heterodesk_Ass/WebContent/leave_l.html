@@ -1,0 +1,1006 @@
+<!doctype html>
+<html class="fixed">
+	<head>
+
+		<!-- Basic -->
+		<meta charset="UTF-8">
+
+		<title>Hetero</title>
+		<meta name="keywords" content="HETERO" />
+		<meta name="description" content="Hetero">
+		<meta name="author" content="Hetero">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<!-- Web Fonts  -->
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.css" />
+		
+		<!-- Specific Page Vendor CSS -->
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="assets/stylesheets/theme.css" />
+		<link rel="stylesheet" href="assets/stylesheets/date.css" />
+		<link rel="stylesheet" href="assets/stylesheets/jquery-ui.css" />
+
+		<!-- Skin CSS -->
+		<link rel="stylesheet" href="assets/stylesheets/skins/default.css" />
+
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="assets/stylesheets/theme-custom.css">
+		
+		
+		<link href="Per_src/perfect-scrollbar.css" rel="stylesheet">
+		   <script src="Per_src/jquery.mousewheel.js"></script>
+        <script src="Per_src/perfect-scrollbar.js"></script>
+<!-- <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script> -->
+		<!-- Head Libs -->
+	
+		<style>
+			.center_div{
+    margin: 0 auto;
+    width:50% /* value of your choice which suits your alignment */
+}
+.center_div1{
+    margin: 10px auto;
+	
+    width:100% /* value of your choice which suits your alignment */
+}
+.select1 {
+	border: 1px solid #E5E7E9;
+	border-radius: 6px;
+	height: 30px;
+	padding: 4px;
+	outline: none;
+}
+.clearfix{
+
+height:20px;
+}
+
+
+</style>
+ <script type="text/javascript">
+      $(document).ready(function ($) {
+        $('#description').perfectScrollbar({
+          wheelSpeed: 20,
+          wheelPropagation: false
+        });
+      });
+    </script>
+		 <script>
+  /* $( function() {
+   var dateFormat = "yy-mm-dd",
+      from = $( "#from" )
+        .datepicker({
+		//dateFormat: 'dd-mm-yy',
+		  dateFormat: 'yy-mm-dd',
+          defaultDate: "+1w",
+          changeMonth: true,
+          
+        })
+        .on( "change", function() {
+          to.datepicker( "option", "minDate", getDate( this ) );
+        }),
+      to = $( "#to" ).datepicker({
+    	  dateFormat: 'yy-mm-dd',
+        defaultDate: "+1w",
+        changeMonth: true,
+        
+      })
+      .on( "change", function() {
+        from.datepicker( "option", "maxDate", getDate( this ) );
+      });
+ 
+    function getDate( element ) {
+      var date;
+      try {
+        date = $.datepicker.parseDate( dateFormat, element.value );
+      } catch( error ) {
+        date = null;
+      }
+ 
+      return date;
+    }
+  } ); */
+  
+  $( function() {
+	  $("#from").datepicker({
+		  
+		  changeMonth: true,
+	      changeYear:true,
+			//maxDate : 0,
+			dateFormat : 'yy-mm-dd',
+			
+			 yearRange: '2016:2020',
+			 
+			onSelect : function(date) {
+				$("#to").datepicker('option', 'minDate', date);
+			}
+		});
+
+		$("#to").datepicker({
+			changeMonth: true,
+	        changeYear:true,
+	        //maxDate: 0,
+			dateFormat : 'yy-mm-dd',
+				 yearRange: '2016:2020'
+
+		});
+	  });
+  </script>
+  <script>
+  $( function() {
+    $( "#date" ).datepicker(
+    {
+    	dateFormat: 'yy-mm-dd'
+    }		
+    );
+    
+  } );
+ 
+  $( function() {
+    $( "#date1" ).datepicker(
+    {
+    	dateFormat: 'yy-mm-dd'
+    }
+    );
+    
+  } );
+  </script>
+   <script>
+  $( function() {
+	  var availableTags = 
+		  [
+		  "abhisheksingh@heterohealthcare.com",
+"ajaykumar.s@heterohealthcare.com",
+"aksahoo@heterohealthcare.com",
+"aliahmed@heterohealthcare.com",
+"alok.p@heterohealthcare.com",
+"anuradha@heterohealthcare.com",
+"aurokanta.m@heterohealthcare.com",
+"b.jena@heterohealthcare.com",
+"bhanupratap@heterohealthcare.com",
+"bharat.gehalot@heterohealthcare.com",
+"bose@heterohealthcare.com",
+"brajgaurav@azistaindustries.com",
+"brijeshsharma@heterohealthcare.com",
+"chiranjeevi.velagala@heterohealthcare.com",
+"csreddy@heterohealthcare.com",
+"damodararao.m@heterohealthcare.com",
+"deepak@heterohealthcare.com",
+"deepaksharma@heterohealthcare.com",
+"deshmukh.v@heterohealthcare.com",
+"diaspaahmedabad.asm@heterohealthcare.com",
+"diaspaaurangabad.asm@heterohealthcare.com",
+"diaspabangalore.asm@heterohealthcare.com",
+"diaspabarasat.fe@heterohealthcare.com",
+"diaspabaroda.asm@heterohealthcare.com",
+"diaspabhopal.asm@heterohealthcare.com",
+"diaspabhubaneswar.asm@heterohealthcare.com",
+"diaspacalicut.asm@heterohealthcare.com",
+"diaspachandigarh.asm@heterohealthcare.com",
+"diaspachennai.asm1@heterohealthcare.com",
+"diaspachennai.asm2@heterohealthcare.com",
+"diaspacoimbatore.asm@heterohealthcare.com",
+"diaspacuttack.asm@heterohealthcare.com",
+"diaspadelhi.asm1@heterohealthcare.com",
+"diaspadelhi.asm2@heterohealthcare.com",
+"diaspadelhi.asm3@heterohealthcare.com",
+"diaspaernakulam.asm@heterohealthcare.com",
+"diaspaguwahati.asm@heterohealthcare.com",
+"diaspahowrah.asm@heterohealthcare.com",
+"diaspahubli.asm@heterohealthcare.com",
+"diaspahyderabad.asm1@heterohealthcare.com",
+"diaspahyderabad.asm2@heterohealthcare.com",
+"diaspaindore.asm@heterohealthcare.com",
+"diaspajabalpur.asm@heterohealthcare.com",
+"diaspajaipur.asm@heterohealthcare.com",
+"diaspajodhpur.asm@heterohealthcare.com",
+"diaspakanpur.asm@heterohealthcare.com",
+"diaspakolhapur.asm@heterohealthcare.com",
+"diaspakolkata.asm1@heterohealthcare.com",
+"diaspakolkata.asm2@heterohealthcare.com",
+"diaspakolkata.fe3@heterohealthcare.com",
+"diaspakurnool.asm@heterohealthcare.com",
+"diaspalucknow.asm@heterohealthcare.com",
+"diaspaludhiana.asm@heterohealthcare.com",
+"diaspamadurai.asm@heterohealthcare.com",
+"diaspamangalore.asm@heterohealthcare.com",
+"diaspameerut.asm@heterohealthcare.com",
+"diaspamumbai.asm1@heterohealthcare.com",
+"diaspamumbai.asm2@heterohealthcare.com",
+"diaspamumbai.asm3@heterohealthcare.com",
+"diaspamuzaffarpur.asm@heterohealthcare.com",
+"diaspanagpur.asm@heterohealthcare.com",
+"diaspapatna.asm@heterohealthcare.com",
+"diaspapune.asm1@heterohealthcare.com",
+"diaspapune.asm2@heterohealthcare.com",
+"diasparajkot.asm@heterohealthcare.com",
+"diasparanchi.asm@heterohealthcare.com",
+"diaspasilchar.asm@heterohealthcare.com",
+"diaspasiliguri.asm@heterohealthcare.com",
+"diaspasrinagar.asm@heterohealthcare.com",
+"diaspavaranasi.asm@heterohealthcare.com",
+"diaspavijayawada.asm@heterohealthcare.com",
+"diaspavizag.asm@heterohealthcare.com",
+"dilip.t@heterohealthcare.com",
+"hiradhar@heterohealthcare.com",
+"jagdish.n@heterohealthcare.com",
+"jitendrasingh@heterohealthcare.com",
+"kalyandas@heterohealthcare.com",
+"kotireddy@heterohealthcare.com",
+"kvkreddy@heterohealthcare.com",
+"manasp@heterohealthcare.com",
+"mangesh.p@heterohealthcare.com",
+"mani.ps@heterohealthcare.com",
+"manoj.saxena@heterohealthcare.com",
+"manoj@heterohealthcare.com",
+"mitulpatel@heterohealthcare.com",
+"nagaraju.v@heterohealthcare.com",
+"nilay.chatterjee@heterohealthcare.com",
+"nishanth.d@heterohealthcare.com",
+"nitinb@heterohealthcare.com",
+"obulareddy.pbc@heterohealthcare.com",
+"pankajkumar.r@heterohealthcare.com",
+"rakesh.singh@heterohealthcare.com",
+"ramanuja@heterohealthcare.com",
+"ramaswamy.v@heterohealthcare.com",
+"ravi.k@heterohealthcare.com",
+"ravichandra@heterohealthcare.com",
+"s@heterohealthcare.com",
+"saikatchakraborty@heterohealthcare.com",
+"saikumar.b@heterohealthcare.com",
+"sandhya@heterohealthcare.com",
+"sangeetha.b@heterohealthcare.com",
+"sanjeev.m@heterohealthcare.com",
+"santhoshreddy.y@heterohealthcare.com",
+"sdprasad@heterohealthcare.com",
+"shantaram.p@heterohealthcare.com",
+"sp.coiabm@heterohealthcare.com",
+"sp.hydabm@heterohealthcare.com",
+"sp.punabm@heterohealthcare.com",
+"sp.thrabm@heterohealthcare.com",
+"sp.triabm@heterohealthcare.com",
+"sp.vijabm@heterohealthcare.com",
+"sridhars@heterohealthcare.com",
+"srihari.b@heterohealthcare.com",
+"srinivasa.ch@heterohealthcare.com",
+"srinivasarao.m@heterohealthcare.com",
+"srreddy@heterohealthcare.com",
+"subash@heterohealthcare.com",
+"sufiyanahmed@heterohealthcare.com",
+"sunil@azistaindustries.com",
+"sunilp@heterohealthcare.com",
+"sunitgupta@heterohealthcare.com",
+"sureshbabu.n@heterohealthcare.com",
+"sureshbabu@heterohealthcare.com",
+"talk2pranabkr@gmail.com",
+"varunt@heterohealthcare.com",
+"volga.cheasm@heterohealthcare.com",
+"volga.delasm@heterohealthcare.com",
+"volga.jaiasm@heterohealthcare.com",
+"volga.kolasm@heterohealthcare.com",
+"yjojireddy@heterohealthcare.com"
+
+		  ];
+	  
+    function split( val ) {
+      return val.split( /,\s*/ );
+    }
+    function extractLast( term ) {
+      return split( term ).pop();
+    }
+ 
+    $( "#tags" )
+      // don't navigate away from the field on tab when selecting an item
+      .on( "keydown", function( event ) {
+        if ( event.keyCode === $.ui.keyCode.TAB &&
+            $( this ).autocomplete( "instance" ).menu.active ) {
+          event.preventDefault();
+        }
+      })
+      .autocomplete({
+        minLength: 0,
+        source: function( request, response ) {
+          // delegate back to autocomplete, but extract the last term
+          response( $.ui.autocomplete.filter(
+            availableTags, extractLast( request.term ) ) );
+        },
+        focus: function() {
+          // prevent value inserted on focus
+          return false;
+        },
+        select: function( event, ui ) {
+          var terms = split( this.value );
+          // remove the current input
+          terms.pop();
+          // add the selected item
+          terms.push( ui.item.value );
+          // add placeholder to get the comma-and-space at the end
+          terms.push( "" );
+          this.value = terms.join( ", " );
+          return false;
+        }
+      });
+  } );
+  </script>
+  <script>
+  $( function() {
+	  var availableTags = 
+		  [
+		  "abhisheksingh@heterohealthcare.com",
+"ajaykumar.s@heterohealthcare.com",
+"aksahoo@heterohealthcare.com",
+"aliahmed@heterohealthcare.com",
+"alok.p@heterohealthcare.com",
+"anuradha@heterohealthcare.com",
+"aurokanta.m@heterohealthcare.com",
+"b.jena@heterohealthcare.com",
+"bhanupratap@heterohealthcare.com",
+"bharat.gehalot@heterohealthcare.com",
+"bose@heterohealthcare.com",
+"brajgaurav@azistaindustries.com",
+"brijeshsharma@heterohealthcare.com",
+"chiranjeevi.velagala@heterohealthcare.com",
+"csreddy@heterohealthcare.com",
+"damodararao.m@heterohealthcare.com",
+"deepak@heterohealthcare.com",
+"deepaksharma@heterohealthcare.com",
+"deshmukh.v@heterohealthcare.com",
+"diaspaahmedabad.asm@heterohealthcare.com",
+"diaspaaurangabad.asm@heterohealthcare.com",
+"diaspabangalore.asm@heterohealthcare.com",
+"diaspabarasat.fe@heterohealthcare.com",
+"diaspabaroda.asm@heterohealthcare.com",
+"diaspabhopal.asm@heterohealthcare.com",
+"diaspabhubaneswar.asm@heterohealthcare.com",
+"diaspacalicut.asm@heterohealthcare.com",
+"diaspachandigarh.asm@heterohealthcare.com",
+"diaspachennai.asm1@heterohealthcare.com",
+"diaspachennai.asm2@heterohealthcare.com",
+"diaspacoimbatore.asm@heterohealthcare.com",
+"diaspacuttack.asm@heterohealthcare.com",
+"diaspadelhi.asm1@heterohealthcare.com",
+"diaspadelhi.asm2@heterohealthcare.com",
+"diaspadelhi.asm3@heterohealthcare.com",
+"diaspaernakulam.asm@heterohealthcare.com",
+"diaspaguwahati.asm@heterohealthcare.com",
+"diaspahowrah.asm@heterohealthcare.com",
+"diaspahubli.asm@heterohealthcare.com",
+"diaspahyderabad.asm1@heterohealthcare.com",
+"diaspahyderabad.asm2@heterohealthcare.com",
+"diaspaindore.asm@heterohealthcare.com",
+"diaspajabalpur.asm@heterohealthcare.com",
+"diaspajaipur.asm@heterohealthcare.com",
+"diaspajodhpur.asm@heterohealthcare.com",
+"diaspakanpur.asm@heterohealthcare.com",
+"diaspakolhapur.asm@heterohealthcare.com",
+"diaspakolkata.asm1@heterohealthcare.com",
+"diaspakolkata.asm2@heterohealthcare.com",
+"diaspakolkata.fe3@heterohealthcare.com",
+"diaspakurnool.asm@heterohealthcare.com",
+"diaspalucknow.asm@heterohealthcare.com",
+"diaspaludhiana.asm@heterohealthcare.com",
+"diaspamadurai.asm@heterohealthcare.com",
+"diaspamangalore.asm@heterohealthcare.com",
+"diaspameerut.asm@heterohealthcare.com",
+"diaspamumbai.asm1@heterohealthcare.com",
+"diaspamumbai.asm2@heterohealthcare.com",
+"diaspamumbai.asm3@heterohealthcare.com",
+"diaspamuzaffarpur.asm@heterohealthcare.com",
+"diaspanagpur.asm@heterohealthcare.com",
+"diaspapatna.asm@heterohealthcare.com",
+"diaspapune.asm1@heterohealthcare.com",
+"diaspapune.asm2@heterohealthcare.com",
+"diasparajkot.asm@heterohealthcare.com",
+"diasparanchi.asm@heterohealthcare.com",
+"diaspasilchar.asm@heterohealthcare.com",
+"diaspasiliguri.asm@heterohealthcare.com",
+"diaspasrinagar.asm@heterohealthcare.com",
+"diaspavaranasi.asm@heterohealthcare.com",
+"diaspavijayawada.asm@heterohealthcare.com",
+"diaspavizag.asm@heterohealthcare.com",
+"dilip.t@heterohealthcare.com",
+"hiradhar@heterohealthcare.com",
+"jagdish.n@heterohealthcare.com",
+"jitendrasingh@heterohealthcare.com",
+"kalyandas@heterohealthcare.com",
+"kotireddy@heterohealthcare.com",
+"kvkreddy@heterohealthcare.com",
+"manasp@heterohealthcare.com",
+"mangesh.p@heterohealthcare.com",
+"mani.ps@heterohealthcare.com",
+"manoj.saxena@heterohealthcare.com",
+"manoj@heterohealthcare.com",
+"mitulpatel@heterohealthcare.com",
+"nagaraju.v@heterohealthcare.com",
+"nilay.chatterjee@heterohealthcare.com",
+"nishanth.d@heterohealthcare.com",
+"nitinb@heterohealthcare.com",
+"obulareddy.pbc@heterohealthcare.com",
+"pankajkumar.r@heterohealthcare.com",
+"rakesh.singh@heterohealthcare.com",
+"ramanuja@heterohealthcare.com",
+"ramaswamy.v@heterohealthcare.com",
+"ravi.k@heterohealthcare.com",
+"ravichandra@heterohealthcare.com",
+"s@heterohealthcare.com",
+"saikatchakraborty@heterohealthcare.com",
+"saikumar.b@heterohealthcare.com",
+"sandhya@heterohealthcare.com",
+"sangeetha.b@heterohealthcare.com",
+"sanjeev.m@heterohealthcare.com",
+"santhoshreddy.y@heterohealthcare.com",
+"sdprasad@heterohealthcare.com",
+"shantaram.p@heterohealthcare.com",
+"sp.coiabm@heterohealthcare.com",
+"sp.hydabm@heterohealthcare.com",
+"sp.punabm@heterohealthcare.com",
+"sp.thrabm@heterohealthcare.com",
+"sp.triabm@heterohealthcare.com",
+"sp.vijabm@heterohealthcare.com",
+"sridhars@heterohealthcare.com",
+"srihari.b@heterohealthcare.com",
+"srinivasa.ch@heterohealthcare.com",
+"srinivasarao.m@heterohealthcare.com",
+"srreddy@heterohealthcare.com",
+"subash@heterohealthcare.com",
+"sufiyanahmed@heterohealthcare.com",
+"sunil@azistaindustries.com",
+"sunilp@heterohealthcare.com",
+"sunitgupta@heterohealthcare.com",
+"sureshbabu.n@heterohealthcare.com",
+"sureshbabu@heterohealthcare.com",
+"talk2pranabkr@gmail.com",
+"varunt@heterohealthcare.com",
+"volga.cheasm@heterohealthcare.com",
+"volga.delasm@heterohealthcare.com",
+"volga.jaiasm@heterohealthcare.com",
+"volga.kolasm@heterohealthcare.com",
+"yjojireddy@heterohealthcare.com"
+
+		  ];
+    function split( val ) {
+      return val.split( /,\s*/ );
+    }
+    function extractLast( term ) {
+      return split( term ).pop();
+    }
+ 
+    $( "#tags1" )
+      // don't navigate away from the field on tab when selecting an item
+      .on( "keydown", function( event ) {
+        if ( event.keyCode === $.ui.keyCode.TAB &&
+            $( this ).autocomplete( "instance" ).menu.active ) {
+          event.preventDefault();
+        }
+      })
+      .autocomplete({
+        minLength: 0,
+        source: function( request, response ) {
+          // delegate back to autocomplete, but extract the last term
+          response( $.ui.autocomplete.filter(
+            availableTags, extractLast( request.term ) ) );
+        },
+        focus: function() {
+          // prevent value inserted on focus
+          return false;
+        },
+        select: function( event, ui ) {
+          var terms = split( this.value );
+          // remove the current input
+          terms.pop();
+          // add the selected item
+          terms.push( ui.item.value );
+          // add placeholder to get the comma-and-space at the end
+          terms.push( "" );
+          this.value = terms.join(",");
+          return false;
+        }
+      });
+  } );
+  </script>
+  <script>
+  function GetLoadData(val){
+	  
+	 if(val.value=="OD"){
+		 document.getElementById("From_location1").style.display='';
+		 document.getElementById("To_location1").style.display='';
+		 document.getElementById("From_location").style.display='';
+		 document.getElementById("To_location").style.display='';
+	 }else{
+		 document.getElementById("From_location").style.display='none';
+		 document.getElementById("To_location").style.display='none';
+		 
+		 document.getElementById("From_location1").style.display='none';
+		 document.getElementById("To_location1").style.display='none';
+		 
+	 }
+	  
+	  
+  }
+  
+/* function Choose_Location(val){
+		 if(val.id=="From_loc"){
+			 if(val.value=="OTHER"){
+			  document.getElementById("From_location").style.display='';
+			  document.getElementById("From_location").value='';
+			 }else{
+				 document.getElementById("From_location").style.display='none';
+				 document.getElementById("From_location").value=val.value; 
+			 }
+		 }else if(val.id=="To_loc"){
+			 if(val.value=="OTHER"){
+			  document.getElementById("To_location").style.display='';
+			  document.getElementById("To_location").value="";
+			 }else{
+				 document.getElementById("To_location").style.display='none';
+				 document.getElementById("To_location").value=val.value; 
+			 }
+		 }
+} */
+  </script>
+	</head>
+	<body>
+		<section class="body">
+					<!-- start: page -->
+					<div id="description" class="wrapper">
+					<div class="container">
+						<div class="row center_div1" >
+							<div class="col-md-12">
+								<div class="panel panel-danger" >
+									<div class="panel-heading1">
+										<span><b>Apply Leave</b> </span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								        <!-- <span id="Responce_Message" style="color:white;" >  </span> -->
+									</div>
+									<div class="panel-body">
+										<form action="" method="post" >
+											<div class="col-md-6">	
+												<div class="form-group row">
+													<label class="col-sm-6 control-label">Select Leave Category</label>
+													<select  id="Leave_Type" class="select1" onChange="GetLoadData(this);" class=" col-sm-6">
+														
+														<option value="SL">Sick Leave</option>
+														<option value="CL" selected>Casual Leave</option>
+														<option value="EL">Earned Leave</option>
+														<option value="CF">COMP-OFF</option>
+														<option value="OD">On Duty</option>
+														
+													</select>
+												</div>
+																						
+												<div class="form-group row">
+													<div class="col-md-6">
+														<label  class="col-sm-4 control-label">From</label>
+														<div class="col-sm-8">
+														<input type="text" id="from" name="from" class="form-control " readOnly=true >
+														</div>
+													</div>	
+													<div class="col-md-6">
+														<label  class="col-sm-4 control-label" >To</label>
+														<div class="col-sm-8">
+														<input type="text" id="to" name="to" class="form-control " readOnly=true >
+														</div>
+													</div>
+												</div>	
+												
+										<!-- ---------ADD FOR LOCATION  ------------->
+												
+                                     <div class="form-group row">
+														<div class="col-md-5" id="From_location1" style='display:none;'>
+														
+														<!-- <input type="text" id="From_location" style='display:;' name="date" maxlength="100" class="form-control"    /> -->
+														<lable>From Location</lable>
+														<input  list="potentials1" type="text" style='display:none;' placeholder="Search from Location" id="From_location"  maxlength="100" class="form-control" onkeypress="locationSearch(this);" ></input>
+														<datalist id="potentials1" >
+														<option value="HYDERABAD">
+														</datalist>
+														
+															<!-- <label class="col-sm-9 control-label">Half Day Applicable</label>
+															<div class="col-sm-3">
+																<label>
+																	<input class="form-check-input" type="checkbox" name="HalfDay" onclick="RefreshRadio(this,'date')"  id="HalfDay" value="Yes"> Yes
+																</label>
+															</div> -->
+														</div>	
+														
+														<div class="col-md-2"> &nbsp; </div>
+														<div class="col-md-5" style='display:none;' id="To_location1">
+														
+														<!-- <input type="text" id="To_location" style='display:;' name="date" maxlength="100" class="form-control"    /> -->
+														<!-- tabindex='1' -->
+														<lable>To Location</lable>
+														<input  list="potentials" type="text" placeholder="Search to Location" style='display:none;' id="To_location" maxlength="100" class="form-control" onkeypress="locationSearch(this);" ></input>
+														<datalist id="potentials" >
+														<option value="HYDERABAD">
+                                                        
+														</datalist>
+																<!-- <label  class="col-sm-4 control-label">Date</label>
+																<div class="col-sm-8">
+																	<input type="text" id="date" name="date" class="form-control" Disabled  readOnly=true />
+																</div> -->
+														</div>
+														
+							</div>
+												
+												
+												
+											<!-- ---------ADD FOR LOCATION  ------------->	
+												
+												<div class="form-group row">
+														<div class="col-md-7">
+															<label class="col-sm-9 control-label">Half Day Applicable</label>
+															<div class="col-sm-3">
+																<label>
+																	<input class="form-check-input" type="checkbox"  name="HalfDay" onclick="RefreshRadio(this,'date')"  id="HalfDay" value="Yes"> Yes
+																</label>
+															</div>
+														</div>	
+														<div class="col-md-5">
+																<label  class="col-sm-4 control-label">Date</label>
+																<div class="col-sm-8">
+																	<input type="text" id="date" name="date" class="form-control" Disabled  readOnly=true />
+																</div>
+																
+														</div>
+														
+												</div>
+												<div class="form-group row">
+														<div class="col-md-7">
+															<label class="col-sm-9 control-label">COMP-OFF Applicable</label>
+															<div class="col-sm-3">
+																<label>
+																	<input class="form-check-input" type="checkbox" name="compoff" onclick="RefreshRadio(this,'date1')"  id="compoff" value="Yes"> Yes
+																</label>
+															</div>
+														</div>	
+														<div class="col-md-5">
+																<label  class="col-sm-4 control-label">Date</label>
+																<div class="col-sm-8">
+																	<input type="text" id="date1" name="date1" class="form-control" Disabled readOnly=true />
+																</div>
+																
+														</div>
+														
+												</div>
+												<div class="form-group row">
+													<div class="col-sm-12">
+													
+													
+														<strong>Guidelines:</strong>
+														<ul>
+															<li>If you select Half day applicable, then half day worked date should be matched with either FROM date or TO date, else it will be considered as full day leave.</li>
+															<li>If you select Comp-off applicable, then comp off date should be matched with either week-off or public holiday, else it won't be considered.</li>
+															<li>In case of sick leaves, if any public holiday or week off days present in between the dates selected, those days will also be considered as part of the leave.</li>
+															<li>If you have to use multiple mails please mention them separated with comma(,)</li>
+															<li>By default, request copies will be sent to Ms. Sangeetha from HR team. So, there is no need to specify her mail id in CC. For any status information/track, kindly mention your mail id also in CC.</li>
+															<li><B>Note: Please contact HR team for further information.</B></li>
+														</ul>
+													</div>
+												</div>
+												
+											</div>
+											<div class="col-sm-6 col-md-6">
+											
+												<div class="form-group">
+													<label class="col-md-4 control-label">To</label>
+													<div class="col-md-8">
+														<input type="email" class="form-control" name="toemail" id="tags"  placeholder="someone@example.com">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-4 control-label">Cc</label>
+													<div class="col-md-8">
+														<input type="email" class="form-control" name="ccemail" id="tags1"   placeholder="someone@example.com">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-4 control-label">Subject</label>
+													<div class="col-md-8">
+														<input type="text" class="form-control" name="subject" value="Request For Leave" id="subject" placeholder="Subject">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-4 control-label">Reason for Leave</label>
+													<div class="col-md-8">
+														<textarea class="form-control" rows="5" id="reason" name="reason" placeholder="Just mention reason only, not required a letter format "></textarea>
+													</div>
+												</div>
+												<span id="Responce_Message" style="color:red;" >  </span>
+												<!-- <div class="form-group">
+													<label class="col-md-4 control-label">Attachment</label>
+													<div class="col-md-8">
+														<div class="fileupload fileupload-new" data-provides="fileupload">
+															<input type="file" id="resume">
+															<span class="fileupload-preview"></span>
+															
+														</div>
+													</div>
+												</div> -->
+												<div class="form-group">
+												<button type="button"  id="Send_Button" class="btn btn-primary align-right" onclick="Leave_Validation();" >Send</button>
+												</div>
+												<div class="clearfix"></div>
+											</form>
+											
+										</div>
+									</div>
+									
+									
+								</div>
+							</div>
+						</div>	
+						
+					</div>
+					</div>
+					<!-- end: page -->
+				
+
+			
+
+			
+		</section>
+<script>
+function RefreshRadio(evn,data){
+	 if(document.getElementById(""+evn.id+"").checked){
+	   document.getElementById(""+data+"").disabled=false;
+	 }else{
+		 document.getElementById(""+data+"").value='';
+		 document.getElementById(""+data+"").disabled=true;
+	 }
+}
+
+function Leave_Validation(){
+  document.getElementById("Responce_Message").innerHTML="Please Wait...!";
+ var Leave_Type=document.getElementById('Leave_Type').value;
+   // This Script Add for Location Filter ...
+  /*  if(Leave_Type=="OD"){
+	  var From_location=document.getElementById("From_location").value;
+	  var To_location=document.getElementById("To_location").value;
+	  if((From_location.trim()).length==0 || (To_location.trim()).length==0){
+		  document.getElementById("Responce_Message").innerHTML="Please Select From & To locations OR Write location in given text box for other location.";
+		  return false;
+	  }
+   } */
+   //This Script Add for Loacation Fetching ..
+ var from_date=document.getElementById('from').value;
+ var to_date=document.getElementById('to').value;
+ var HalfDay=document.getElementById('HalfDay').checked;
+ var compoff=document.getElementById('compoff').checked;
+ 
+ var Hal_date=document.getElementById('date').value;
+ 
+ var comm_date=document.getElementById('date1').value;
+ 
+ var to_mail=document.getElementById('tags').value; // to mail
+ var cc_mail=document.getElementById('tags1').value; // ccmail
+ var subject=document.getElementById('subject').value;
+ var reason=document.getElementById('reason').value;
+
+ var From_location=document.getElementById("From_location").value;
+ var To_location=document.getElementById("To_location").value;
+ 
+   try{
+   		to_mail=to_mail.trim();
+   		cc_mail=cc_mail.trim();
+   		subject=subject.trim();
+   		reason=reason.trim();
+   }catch(err){
+	   alert(err.message);
+   }
+   
+ if(from_date.length<4){
+	   
+	   document.getElementById("Responce_Message").innerHTML="Please Select From Date";
+	   return false;
+   }else if(to_date.length<4){
+	   document.getElementById("Responce_Message").innerHTML="Please Select To Date";
+	   return false;
+    }else if(Leave_Type=="OD" && ((From_location.trim()).length==0 || (To_location.trim()).length==0)){
+    
+   /*  if((From_location.trim()).length==0 || (To_location.trim()).length==0){ */
+	  
+	    document.getElementById("Responce_Message").innerHTML="Please Select From & To locations OR Write location in given text box for other location.";
+	    return false;
+      /* } */
+   }else if(HalfDay && Hal_date.length<4){
+	   
+	   document.getElementById("Responce_Message").innerHTML="Please select Half Day applicable date";
+	   return false;
+   }else if(compoff && comm_date.length<4){
+	   document.getElementById("Responce_Message").innerHTML="Please select COMP-OFF applicable  date";
+	   return false;
+   }else if(HalfDay && Hal_date.length>4){
+	   if(from_date!=Hal_date && to_date!=Hal_date ){
+	   	document.getElementById("Responce_Message").innerHTML="Half Day Applicable date should be match with From date or To date ";
+	   	return false;
+	   }
+   }else if(to_mail.length<4){
+	   
+	   document.getElementById("Responce_Message").innerHTML="Please enter valid e-mail address else it should'nt process to your manager ";
+	   	return false; 
+	   
+	   
+   }else if(subject.length<3){
+	   
+	   document.getElementById("Responce_Message").innerHTML="Please enter subject";
+	   	return false; 
+	   
+	   
+   }else if(reason.length<4){
+	   
+	   document.getElementById("Responce_Message").innerHTML="Please enter reason for leave";
+	   	return false; 
+	   
+	   
+   }
+   document.getElementById("Responce_Message").innerHTML="";
+   // alert(reason.length +"~~~"+ to_mail.length);
+   if(reason.length>4 && to_mail.length>4){
+	   
+	   Apply_Leave(Leave_Type,from_date,to_date,HalfDay,Hal_date,compoff,comm_date,to_mail,cc_mail,subject,reason);
+	   
+   }else{
+	   
+	   document.getElementById("Responce_Message").innerHTML="Please check To mail & reason for leave ";
+   }
+}
+
+function Apply_Leave(Leave_Type,from_date,to_date,HalfDay,Hal_date,compoff,comm_date,to_mail,cc_mail,subject,reason){
+	    
+	    document.getElementById("Send_Button").disabled=true;
+	    var To_loc=document.getElementById("To_location").value;
+	    var From_loc=document.getElementById("From_location").value;
+	    
+	    if(Leave_Type!="OD"){
+	    	To_loc='NA';
+	    	From_loc='NA';
+	    }
+	    
+	  var formData = {Routing:"LeaveMgM",Leave_Type:""+Leave_Type+"",from_date:""+from_date+"",to_date:""+to_date+"",HalfDay:""+HalfDay+"",Hal_date:""+Hal_date+"",compoff:""+compoff+"",comm_date:""+comm_date+"",to_mail:""+to_mail+"",cc_mail:""+cc_mail+"",subject:""+subject+"",reason:""+reason+"",From_loc:""+From_loc+"",To_loc:""+To_loc+""};
+	try{
+	    $.ajax({
+	          type: "post",
+	          url: "LeaveManagement",
+	          data: formData,
+	          success: function(responseData, textStatus, jqXHR) {
+	        	  document.getElementById("Send_Button").disabled=false;
+	             try{
+	            	document.getElementById("Responce_Message").innerHTML=responseData;
+	            	document.getElementById('from').value='';
+	            	document.getElementById('to').value='';
+	            	document.getElementById('HalfDay').checked=false;
+	            	document.getElementById('compoff').checked=false;
+	            	document.getElementById('date').value='';
+	            	document.getElementById('date1').value='';
+	            	document.getElementById('tags').value=''; // to mail
+	            	document.getElementById('tags1').value=''; // ccmail
+	            	document.getElementById('subject').value;
+	            	document.getElementById('reason').value='';
+	            	document.getElementById("To_location").value='';
+	            	document.getElementById("From_location").value='';
+	             }catch(err){
+	            	 document.getElementById("Responce_Message").innerHTML=err;
+	             }
+	          },
+	          error: function(jqXHR, textStatus, errorThrown) {
+	               console.log(errorThrown);
+	               document.getElementById("Send_Button").disabled=false;
+	               document.getElementById("Responce_Message").innerHTML=errorThrown;
+	             // document.getElementById("Responce_Message_btn").style.display='';            
+	          }
+	      })
+	}catch(err){
+		 document.getElementById("Responce_Message").innerHTML=err;
+	}  
+}	
+	
+function locationSearch(val){
+	//document.getElementById("Responce_Message").innerHTML="Press minimum three letters for searching location and Use Back space if your not geting existing locations."
+	var loc_f_t=document.getElementById(""+val.id+"").value;
+	
+	   if((loc_f_t.trim()).length<2){
+	       
+		   return false;
+	   }
+	    //var To_loc=document.getElementById("To_location").value;
+	   // var From_loc=document.getElementById("From_location").value;
+	    
+	   var formData = {Routing:"Location",loc:""+loc_f_t+"" };
+		try{
+		    $.ajax({
+		          type: "post",
+		          url: "Location_Search",
+		          data: formData,
+		          success: function(responseData, textStatus, jqXHR) {
+		             try{
+		            	 
+		            	 //alert(responseData);
+		            	 //JSON.stringify
+		            	 var Data=JSON.parse(responseData);
+		            	  
+		            	    //alert("7~");
+		            	/*   for (var i=0;i<Data.length;i++) {
+		            	       alert(responseData[i])
+		            	   }  */
+		            	  
+		            	  $.each(Data , function(k, v){
+		            		  
+		            		if(val.id=="To_location"){
+		            		 $('#potentials').append("<option value='" + k + "'>"); 
+		            		}else if(val.id=="From_location"){
+		            		   $('#potentials1').append("<option value='" + k + "'>"); 
+		            		}
+		            		// $(this).focus();
+		                }); 
+		          
+		            	    
+		            	   //alert(3);
+		            	//document.getElementById("Responce_Message").innerHTML=responseData;
+		            	
+		             }catch(err){
+		            	 document.getElementById("Responce_Message").innerHTML=err;
+		             }
+		          },
+		          error: function(jqXHR, textStatus, errorThrown) {
+		               console.log(errorThrown);
+		               alert(errorThrown);
+		               document.getElementById("Responce_Message").innerHTML=errorThrown;
+		             // document.getElementById("Responce_Message_btn").style.display='';            
+		          }
+		      })
+		}catch(err){
+			 document.getElementById("Responce_Message").innerHTML=err;
+		}  
+		
+		   /*  document.getElementById(""+val.id+"").focus();
+		    document.getElementById(""+val.id+"").value='';
+		    document.getElementById(""+val.id+"").value=loc_f_t
+		    document.getElementById(""+val.id+"").focus(); */
+		    
+		    
+		   /*  $('#To_location1')
+	        .children()
+	        .filter(function(){
+	            return $(this).data('show') === 'ANA';
+	        })
+	        .show(); */
+		    
+		    
+			//$("#To_location1").trigger('focus.autocomplete');
+			
+			
+			/* $('#To_location1').on( "focus", function( event, ui ) {
+			    $(this).trigger(jQuery.Event("tab"));
+			   // Since I know keydown opens the menu, might as well fire a keydown event to the element
+			}); */
+			
+		 //$('#potentials').show();
+		//document.getElementById(""+val.id+"").focus();
+		//document.getElementById(""+val.id+"").value='ANN';
+}
+	
+</script>	
+	
+		
+		<!-- Vendor -->
+	 		<script src="assets/vendor/bootstrap/js/bootstrap.js"></script>
+	
+		<!-- Theme Base, Components and Settings -->
+		<script src="assets/javascripts/theme.js"></script>
+	
+		
+		<!-- Theme Initialization Files -->
+		<script src="assets/javascripts/theme.init.js"></script>
+
+
+		
+	</body>
+</html>

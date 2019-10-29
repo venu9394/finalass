@@ -1,0 +1,56 @@
+<!doctype html>
+<html >
+	<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+		
+	     <link href="Per_src/perfect-scrollbar.css" rel="stylesheet">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="Per_src/jquery.mousewheel.js"></script>
+        <script src="Per_src/perfect-scrollbar.js"></script>
+        
+      <style>
+      
+      #description {
+        border: 1px solid gray;
+        height:100%;
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+      }
+	  
+	  #descriptionER {
+       // border: 1px solid gray;
+        height:100%;
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+      }
+	  
+	  #descriptionERR {
+       // border: 1px solid gray;
+        height:99%;
+        width: 99%;
+        overflow: hidden;
+        position: absolute;
+      }
+      
+</style>
+  <script type="text/javascript">
+      $(document).ready(function ($) {
+        $('#description').perfectScrollbar({
+          wheelSpeed: 20,
+          wheelPropagation: false
+        });
+      });
+    </script>
+    
+	</head>
+	<body>
+    <div id="description" class="wrapper">
+      <div id="descriptionER" >
+        <embed id="descriptionERR"  src="HR/Leave_Policy.pdf"   />
+      </div>
+    </div>
+  </body>
+  <!--- -->
+</html>

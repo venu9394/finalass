@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script type='text/javascript'>
+
+function formSubmit(){
+	document.forms[0].action="NewJoinees?Routing=NewJoine";
+	document.forms[0].submit();
+}
+
+setTimeout(formSubmit, 1000);
+</script>
+</head>
+<body  >
+<!-- OnLoad="formSubmit();" -->
+<form action="NewJoinees?Routing=NewJoine" method="Post" >
+ <span align='center' style='color:blue;font:italic'>Please Wait ....</span>
+ <div align='center'>
+   <img src="assets/images/load1.gif" />
+ </div>
+ </form>
+</body>
+</html>

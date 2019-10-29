@@ -1,0 +1,328 @@
+<!doctype html>
+<html class="fixed">
+	<head>
+
+		<!-- Basic -->
+		<meta charset="UTF-8">
+
+		<title>Hetero</title>
+		<meta name="keywords" content="HETERO" />
+		<meta name="description" content="Hetero">
+		<meta name="author" content="Hetero">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<!-- Web Fonts  -->
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css" />
+	     <link href="Per_src/perfect-scrollbar.css" rel="stylesheet">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="Per_src/jquery.mousewheel.js"></script>
+        <script src="Per_src/perfect-scrollbar.js"></script>
+        
+      <style>
+          .contentHolder { position:relative; margin:0px auto; padding:0px; width: 640px; height: 360px; overflow: hidden; }
+          .contentHolder .content { background-image: url('./azusa.jpg'); width: 12800px; height: 7200px; }
+          .spacer { text-align:center }
+        </style>  
+		
+		<style>
+      #description {
+        border: 1px solid gray;
+        height:100%;
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+      }
+    </style>
+    <style>
+    
+#static {
+    position: absolute;
+    border: 3px solid #73AD21;
+}
+</style>
+    
+    <style>
+div.fixed {
+    position: fixed;
+    top:10px
+   /* bottom: 0;*/
+    right: 260;
+    width: 300px;
+    border: 3px solid #73AD21;
+}
+</style>
+
+<style>
+div.relative {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 3px solid #73AD21;
+}
+
+div.absolute {
+    position: absolute;
+    top: 10px;
+    right: 35%;
+    color:#ec0e14;
+    font-size:30px;
+   font-weight:bold;
+   font-family:Georgia;
+    font-family:cursive;
+   margin-bottom:40px;
+}
+</style>
+  <script>
+      jQuery(document).ready(function ($) {
+        "use strict";
+        $('#Default').perfectScrollbar();
+        $('#LongThumb').perfectScrollbar({minScrollbarLength:100});
+      });
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function ($) {
+        $('#description').perfectScrollbar({
+          wheelSpeed: 20,
+          wheelPropagation: false
+        });
+      });
+    </script>
+    
+    
+	</head>
+	<body>
+	
+	
+   
+    
+	<div id="description" class="wrapper">
+	<div class="container">
+						<div class="row center_div1" >
+							<div class="col-md-12">
+								<div class="panel panel-danger" >
+									<div class="panel-heading1">
+										<span><b>Apply Leave</b> </span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								        <!-- <span id="Responce_Message" style="color:white;" >  </span> -->
+									</div>
+									<div class="panel-body">
+										<form action="" method="post" >
+											<div class="col-md-6">	
+												<div class="form-group row">
+													<label class="col-sm-6 control-label">Select Leave Category</label>
+													<select  id="Leave_Type" class="select1" class=" col-sm-6">
+														
+														<option value="Sick_Leave">Sick Leave</option>
+														<option value="Casual_Leave" selected>Casual Leave</option>
+														<option value="Earned_Leave">Earned Leave</option>
+														<option value="COMP_OFF">COMP-OFF</option>
+													</select>
+												</div>
+																						
+												<div class="form-group row">
+													<div class="col-md-6">
+														<label  class="col-sm-4 control-label">From</label>
+														<div class="col-sm-8">
+														<input type="text" id="from" name="from" class="form-control ">
+														</div>
+													</div>	
+													<div class="col-md-6">
+														<label  class="col-sm-4 control-label" >To</label>
+														<div class="col-sm-8">
+														<input type="text" id="to" name="to" class="form-control ">
+														</div>
+													</div>
+													
+												</div>	
+												<div class="form-group row">
+														<div class="col-md-7">
+															<label class="col-sm-9 control-label">Half Day Applicable</label>
+															<div class="col-sm-3">
+																<label>
+																	<input class="form-check-input" type="checkbox" name="HalfDay" onclick="RefreshRadio(this,'date')"  id="HalfDay" value="Yes"> Yes
+																</label>
+															</div>
+														</div>	
+														<div class="col-md-5">
+																<label  class="col-sm-4 control-label">Date</label>
+																<div class="col-sm-8">
+																	<input type="text" id="date" name="date" class="form-control" Disabled />
+																</div>
+																
+														</div>
+														
+												</div>
+												<div class="form-group row">
+														<div class="col-md-7">
+															<label class="col-sm-9 control-label">COMP-OFF Applicable</label>
+															<div class="col-sm-3">
+																<label>
+																	<input class="form-check-input" type="checkbox" name="compoff" onclick="RefreshRadio(this,'date1')"  id="compoff" value="Yes"> Yes
+																</label>
+															</div>
+														</div>	
+														<div class="col-md-5">
+																<label  class="col-sm-4 control-label">Date</label>
+																<div class="col-sm-8">
+																	<input type="text" id="date1" name="date1" class="form-control" Disabled />
+																</div>
+																
+														</div>
+														
+												</div>
+												<div class="form-group row">
+													<div class="col-sm-12">
+														<strong>Guidelines:</strong>
+														<ul>
+															<li>If you select Half day applicable then mentioned date should be matched with FROM date or TO date OR else it will be considered as full day leave.</li>
+															<li>If you select Comp-off applicable then mentioned date should be matched with week-off or public holiday or else it won't be considered.</li>
+															<li>If any Public holiday (OR) Weak off days in between days it will be considered.</li>
+															<li>Note: For further information please contact HR.</li>
+														</ul>
+													</div>
+												</div>
+												<div class="form-group row">
+													<div class="col-sm-12">
+														<strong>Guidelines:</strong>
+														<ul>
+															<li>If you select Half day applicable then mentioned date should be matched with FROM date or TO date OR else it will be considered as full day leave.</li>
+															<li>If you select Comp-off applicable then mentioned date should be matched with week-off or public holiday or else it won't be considered.</li>
+															<li>If any Public holiday (OR) Weak off days in between days it will be considered.</li>
+															<li>Note: For further information please contact HR.</li>
+														</ul>
+													</div>
+												</div>
+												<div class="form-group row">
+													<div class="col-sm-12">
+														<strong>Guidelines:</strong>
+														<ul>
+															<li>If you select Half day applicable then mentioned date should be matched with FROM date or TO date OR else it will be considered as full day leave.</li>
+															<li>If you select Comp-off applicable then mentioned date should be matched with week-off or public holiday or else it won't be considered.</li>
+															<li>If any Public holiday (OR) Weak off days in between days it will be considered.</li>
+															<li>Note: For further information please contact HR.</li>
+														</ul>
+													</div>
+												</div>
+												<div class="form-group row">
+													<div class="col-sm-12">
+														<strong>Guidelines:</strong>
+														<ul>
+															<li>If you select Half day applicable then mentioned date should be matched with FROM date or TO date OR else it will be considered as full day leave.</li>
+															<li>If you select Comp-off applicable then mentioned date should be matched with week-off or public holiday or else it won't be considered.</li>
+															<li>If any Public holiday (OR) Weak off days in between days it will be considered.</li>
+															<li>Note: For further information please contact HR.</li>
+														</ul>
+													</div>
+												</div>
+												<div class="form-group row">
+													<div class="col-sm-12">
+														<strong>Guidelines:</strong>
+														<ul>
+															<li>If you select Half day applicable then mentioned date should be matched with FROM date or TO date OR else it will be considered as full day leave.</li>
+															<li>If you select Comp-off applicable then mentioned date should be matched with week-off or public holiday or else it won't be considered.</li>
+															<li>If any Public holiday (OR) Weak off days in between days it will be considered.</li>
+															<li>Note: For further information please contact HR.</li>
+														</ul>
+													</div>
+												</div>
+												<div class="form-group row">
+													<div class="col-sm-12">
+														<strong>Guidelines:</strong>
+														<ul>
+															<li>If you select Half day applicable then mentioned date should be matched with FROM date or TO date OR else it will be considered as full day leave.</li>
+															<li>If you select Comp-off applicable then mentioned date should be matched with week-off or public holiday or else it won't be considered.</li>
+															<li>If any Public holiday (OR) Weak off days in between days it will be considered.</li>
+															<li>Note: For further information please contact HR.</li>
+														</ul>
+													</div>
+												</div>
+												<div class="form-group row">
+													<div class="col-sm-12">
+														<strong>Guidelines:</strong>
+														<ul>
+															<li>If you select Half day applicable then mentioned date should be matched with FROM date or TO date OR else it will be considered as full day leave.</li>
+															<li>If you select Comp-off applicable then mentioned date should be matched with week-off or public holiday or else it won't be considered.</li>
+															<li>If any Public holiday (OR) Weak off days in between days it will be considered.</li>
+															<li>Note: For further information please contact HR.</li>
+														</ul>
+													</div>
+												</div>
+												<div class="form-group row">
+													<div class="col-sm-12">
+														<strong>Guidelines:</strong>
+														<ul>
+															<li>If you select Half day applicable then mentioned date should be matched with FROM date or TO date OR else it will be considered as full day leave.</li>
+															<li>If you select Comp-off applicable then mentioned date should be matched with week-off or public holiday or else it won't be considered.</li>
+															<li>If any Public holiday (OR) Weak off days in between days it will be considered.</li>
+															<li>Note: For further information please contact HR.</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-6">
+											
+												<div class="form-group">
+													<label class="col-md-4 control-label">To</label>
+													<div class="col-md-8">
+														<input type="email" class="form-control" name="toemail" id="tags"  placeholder="someone@example.com">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-4 control-label">Cc</label>
+													<div class="col-md-8">
+														<input type="email" class="form-control" name="ccemail" id="tags1"   placeholder="someone@example.com">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-4 control-label">Subject</label>
+													<div class="col-md-8">
+														<input type="text" class="form-control" name="subject" value="Request For Leave" id="subject" placeholder="Subject">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-4 control-label">Reason for Leave</label>
+													<div class="col-md-8">
+														<textarea class="form-control" rows="5" id="reason" name="reason" placeholder="Just mention reason only, not required a letter format "></textarea>
+													</div>
+												</div>
+												<span id="Responce_Message" style="color:red;" >  </span>
+												<!-- <div class="form-group">
+													<label class="col-md-4 control-label">Attachment</label>
+													<div class="col-md-8">
+														<div class="fileupload fileupload-new" data-provides="fileupload">
+															<input type="file" id="resume">
+															<span class="fileupload-preview"></span>
+															
+														</div>
+													</div>
+												</div> -->
+												<div class="form-group">
+												<button type="button" class="btn btn-primary align-right" onclick="Leave_Validation();" >Send</button>
+												</div>
+												<div class="clearfix"></div>
+											</form>
+											
+										</div>
+									</div>
+									
+									
+								</div>
+							</div>
+						</div>	
+						
+					</div>
+	
+    </div>
+   
+    
+    
+	
+	 
+		<script src="assets/vendor/bootstrap/js/bootstrap.js"></script>
+	</body>
+</html>

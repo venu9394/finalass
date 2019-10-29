@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context reloadable="true" >
+
+    <!-- Specify a JDBC datasource -->
+    <Resource name="jdbc/HHCL_DESK" auth="Container"
+        type="javax.sql.DataSource" username="hcluser" password="test!@#"
+        driverClassName="com.mysql.jdbc.Driver"
+        url="jdbc:mysql://192.168.30.223:3306/"
+        maxActive="260" maxIdle="0" maxWait="20" removeAbandoned="true" logAbandoned="false"
+        removeAbandonedTimeout="20"
+       />
+ 
+</Context>

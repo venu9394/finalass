@@ -1,0 +1,25 @@
+.GScroll{
+    position:relative;
+    overflow:hidden;
+	   
+}
+
+.GScroll > .GScroll-scrollable{
+    position:absolute;
+    width:100%;
+    top:0px;
+    left:0px;
+}
+
+.GScroll > .GScroll-bar{
+    position:absolute;
+    width:5px;
+    min-height:10px;
+    top:0px;
+    right:0px;
+    display:none;
+    background-color: rgba(0,0,0,0.6);
+    cursor: move;
+    z-index:2;
+	border-radius:10px;
+}
